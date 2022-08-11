@@ -9,33 +9,26 @@ $query= "SELECT * FROM commenti WHERE post='$post' " ;
 $x = $db->prepare($query);
 $x->execute();
 
-$esiste = $x->rowCount();
+//$esiste = $x->rowCount();
 $commenti=array();
 
-
-
-if($esiste >= 1){
-    while($risulato = $x->fetch(PDO::FETCH_ASSOC)){
+//if($esiste > 0){
+    while($row = $x->fetch(PDO::FETCH_ASSOC)){
         $commento = array(
-            "nome_utente" => $x["nome_utente"],
-            "commento" => $x["commento"],
-            "data_ora" => $x["data_ora"]
+            "nome_utente" => $row["nome_utente"],
+            "commento" => $row["commento"],
+            "data_ora" => $row["data_ora"]
         );
         array_push($commenti, $commento);
     }
+    if($commenti){
 
-   echo $commenti; 
+    echo json_encode($commenti);
 
-} else {
-    echo "errore";
-}
-
-
-
-
-
-
-
+    } else {
+        echo "errore";
+    }
+        
 
 
 

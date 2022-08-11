@@ -3,7 +3,7 @@ class Database {
     private $host = "localhost";
     private $nome = "blogwebsicuro";
     private $username = "root";
-    private $password = "";
+    private $password = "root";
     private $conn;
 
     public function connessione(){

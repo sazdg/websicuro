@@ -32,8 +32,8 @@
 <div class="txtPost">
 <h2>COMMENTI</h2>
 <?php
-$post=1;
-  require("get_comments.php");
+    $post=1;
+    require("get_comments.php");
 ?>
 
 
