@@ -2,13 +2,25 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-}
-html{
-    font-family: 'Taviraj', serif;
+    font-size: 20px;
 }
 body {
+    font-family: 'Taviraj', serif;
     background-color: #b5e48c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.titolo {
+    display: block;
+    margin: 1rem auto;
+    width: 50%;
+    height: 100px;
+    width: 300px;
+}
+.txtTitolo {
+    margin: 1rem auto 0rem auto;
+    text-align: center;
 }
 .post {
     display:flex;
@@ -23,31 +35,71 @@ body {
 .par {
     margin:1rem 6rem;
 }
-.btnpost {
+.btnpost, input[type="submit"] {
     padding:15px 40px;
     margin:0 0 30px 0;
-    border:2px solid black;
-    box-shadow: -5px 5px #184e77;
+    border:2px solid #b5e48c;
+    box-shadow: -5px 5px black;
     background-color: #b5e48c;
     border-radius: 25px;
     font-size: 15px;
 }
-.btnpost:hover {
-    margin: -5px -5px 35px 0px;
-    box-shadow: 5px -5px #184e77;
+.btnpost:hover, input[type="submit"]:hover {
+    margin: 0px -2px 30px 0px;
+    box-shadow: -5px 5px black;
+    border: 2px solid black;
     text-decoration: underline;
 }
 
+.txtPost {
+    align-items: center;
+    border-radius: 50px;
+    background-color: bisque;
+    padding: 2rem 3.5rem;
+    margin: 2.5rem;
+}
+
+.frmLogin {
+    margin: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.frmComment {
+    width: 50%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: bisque;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+}
+input, textarea {
+    border-radius: 20px;
+    font-size: 18px;
+    margin: -5px -5px 35px 0px;
+    padding: .8rem;
+    border: 0px solid #fff;
+}
+textarea{
+    width: 300px;
+    height: 150px;
+}
+label {
+    display: block;
+}
 footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
     text-align: center;
     background-color: #76c893;
     padding: 1rem 0;
     border: 2px solid black;
+    margin-top: auto;
 }
-
 nav {
     padding: 15px;
     background-color: #e0edb2;

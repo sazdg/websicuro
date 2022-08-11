@@ -13,10 +13,12 @@
 
 <body>
     <nav>
-        <a href="../index.html">HOMEPAGE</a>
-        <a href="../login.html">LOGIN</a>
+        <span><a href="../index.html">HOMEPAGE</a></span>
+        <span><a href="../login.html">LOGIN</a></span>
     </nav>
-    <h2>CURRENTS</h2>
+    <img src="../images/music.png" class="titolo">
+    <h2 class="txtTitolo">CURRENTS</h2>
+    <div class="txtPost">
     <p>After two Tame Impala albums that centered on Kevin Parker's withdrawal from society, he has entered the stream of life
     on Currents. And he's lonelier than ever. The bemused, occasionally melancholy isolation that defined Innerspeaker and
     Lonerism has metastasized into heartbreak, bitterness, regret—feelings that can actually kill you if left untended. This
@@ -34,14 +36,16 @@
     result of a supernaturally talented obsessive trying to perfect music while redefining their relationship to
     album-oriented rock. There's more care and nuance put into the drum filtering on "Let It Happen" than most bands manage
     in an entire career of recording.</p>
+</div>
+<div class="frmComment">
     <form method="GET" action="../commento.php">
+        <input type="hidden" name="post" value="2"></input>
         <label>Nome: </label><input type="text" name="nome" id="nome"><br>
         <label>Email: </label><input type="email" name="email" id="email"><br>
         <label>Commento</label><textarea name="commento" id="commento" placeholder="Leave a comment"></textarea><br>
-        <input type="submit" value="submit">
-
-
+        <input type="submit" value="Submit">
     </form>
+    </div>
     <footer>
         <p>Progetto Web Sicuro <br> CIME 2021/2022</p>
     </footer>

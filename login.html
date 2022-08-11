@@ -11,17 +11,20 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">HOMEPAGE</a>
-        <a href="login.html">LOGIN</a>
+        <span><a href="index.html">HOMEPAGE</a></span>
+        <span><a href="login.html">LOGIN</a></span>
     </nav>
-    <h4>LOGIN PAGE</h4>
-    <form method="POST" action="login.php">
-        <label>Username</label><br>
+    <img src="./images/music.png" class="titolo">
+    <h2 class="txtTitolo">LOGIN PAGE</h2>
+    <div class="txtPost">
+    <form method="POST" action="login.php" class="frmLogin">
+        <label>Username</label>
         <input type="text" name="username" id="username"><br>
-        <label>Password</label><br>
-        <input type="password" name="passw" id="passw"><br><br>
-        <input type="submit" value="submit" id="submit">
+        <label>Password</label>
+        <input type="password" name="passw" id="passw"><br>
+        <input type="submit" value="SUBMIT" id="submit">
     </form>
+    </div>
     <footer>
         <p>Progetto Web Sicuro <br> CIME 2021/2022</p>
     </footer>
