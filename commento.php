@@ -14,8 +14,20 @@ $query = "INSERT INTO commenti (commento, nome_utente, email_utente, post) VALUE
 $x = $db->prepare($query);
 $x->execute();
 
+
+
 if($x){
-        echo "You sent successfully your review! Thank you!";
+    switch($post) {
+        case 1:
+            header('Location: ./post/post1.php');
+        break;
+        case 2:
+            header('Location:./post/post2.php');
+        break;
+        case 3:
+            header('Location: ./post/post2.php');
+        break;
+     }
     } else {
         echo "smth went wrong ugh (commento.php)";
     }

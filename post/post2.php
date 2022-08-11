@@ -46,6 +46,15 @@
         <input type="submit" value="Submit">
     </form>
     </div>
+    <div class="txtPost">
+<h2>COMMENTI</h2>
+<?php
+$post=2;
+  require("get_comments.php");
+?>
+
+
+</div>
     <footer>
         <p>Progetto Web Sicuro <br> CIME 2021/2022</p>
     </footer>
