@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require("./connDB.php");
 
 $username = $_POST["username"];
@@ -16,14 +18,16 @@ $x->execute();
 
 if($x->rowcount()==1) //se la risposta dalla tabella contiene una riga vuol dire che il login è andato a buon fine
 {
-    
- echo("<script>alert('you are logged!".$query."')</script>");
+ $_SESSION["username"]=$username;
+ echo("<script>alert('you are logged!')</script>");
  echo("<script>window.location = 'index.html';</script>");
+ 
+ 
 
 }
 else {
 
-    echo("<script>alert('credentials wrong!".$query." ')</script>");
+    echo("<script>alert('credentials wrong! ')</script>");
     echo("<script>window.location = 'login.html';</script>");
 }
 
