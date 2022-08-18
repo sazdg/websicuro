@@ -25,7 +25,7 @@ if($x){
             header('Location:./post/post2.php');
         break;
         case 3:
-            header('Location: ./post/post2.php');
+            header('Location: ./post/post3.php');
         break;
      }
     } else {
