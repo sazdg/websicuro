@@ -1,10 +1,13 @@
 <?php
 
 require("./connDB.php");
-$nome = $_GET["nome"];
-$email = $_GET["email"];
-$commento = $_GET["commento"];
-$post = $_GET["post"];
+require("./functions.php");
+
+
+$nome = sanifica_valida($_GET["nome"]);
+$email = sanifica_valida($_GET["email"]);
+$commento = sanifica_valida($_GET["commento"]);
+$post = sanifica_valida($_GET["post"]);
 
 $database = new Database();
 $db = $database->connessione();
