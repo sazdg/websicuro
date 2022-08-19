@@ -2,9 +2,14 @@
 session_start();
 
 require("./connDB.php");
+require("./functions.php");
 
-$username = $_POST["username"];
-$password = $_POST["passw"];
+
+$username = sanifica_valida($_POST["username"]);
+$password = sanifica_valida($_POST["passw"]);
+
+
+
 
 
 $database = new Database();
