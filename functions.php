@@ -1,11 +1,5 @@
 <?php
 
-
-
-
-
-
-
 function sanifica_valida($input) {
   $input = trim($input);
   $input = stripslashes($input);
@@ -13,14 +7,5 @@ function sanifica_valida($input) {
   $input = htmlspecialchars($input);
   return $input;
 }
-
-
-
-
-
-
-
-
-
 
 ?>

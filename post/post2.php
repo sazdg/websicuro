@@ -8,7 +8,7 @@
     <meta name="description" content="Sito web non sicuro">
     <meta name="author" content="sdg, sgc">
     <link rel="stylesheet" href="../style.css">
-    <title>Progetto Web NON Sicuro</title>
+    <title>Progetto Web Sicuro</title>
 </head>
 
 <body>
