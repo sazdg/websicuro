@@ -37,9 +37,9 @@
     <form method="GET" action="../commento.php">
 
         <input type="hidden" name="post" value="3"></input>
-        <label>Nome: </label><input type="text" name="nome" id="nome"><br>
-        <label>Email: </label><input type="email" name="email" id="email"><br>
-        <label>Commento</label><textarea name="commento" id="commento" placeholder="Leave a comment"></textarea><br>
+        <label>Nome: </label><input type="text" name="nome" id="nome" required><br>
+        <label>Email: </label><input type="email" name="email" id="email" required><br>
+        <label>Commento</label><textarea name="commento" id="commento" placeholder="Leave a comment" required></textarea><br>
         <input type="submit" value="Submit">
     </form>
     </div>

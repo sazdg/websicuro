@@ -4,6 +4,12 @@ session_start();
 require("./connDB.php");
 require("./functions.php");
 
+if(empty($_POST["username"]) || empty($_POST["passw"])) {
+
+    echo "<script>alert('Compila i campi richiesti')</script>";
+    echo("<script>window.location = 'index.html';</script>");
+
+} else {
 
 $username = sanifica_valida($_POST["username"]);
 $password = sanifica_valida($_POST["passw"]);
@@ -23,8 +29,6 @@ if($x->rowcount()==1) //se la risposta dalla tabella contiene una riga vuol dire
  $_SESSION["username"]=$username;
  echo("<script>alert('you are logged!')</script>");
  echo("<script>window.location = 'index.html';</script>");
- 
- 
 
 }
 else {
@@ -33,15 +37,7 @@ else {
     echo("<script>window.location = 'login.html';</script>");
 }
 
-
-
-
-
-
-
-
-
-
+}
 
 
 ?>
