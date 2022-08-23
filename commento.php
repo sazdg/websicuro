@@ -3,7 +3,14 @@
 require("./connDB.php");
 require("./functions.php");
 
+if(empty($_GET["nome"]) || empty($_GET["email"]) || empty($_GET["commento"]) || empty($_GET["post"])) {
 
+    $n = $_GET["post"];
+    echo "<script>alert('Compila i campi richiesti')</script>";
+    echo("<script>window.location = 'post/post" . $n . ".php';</script>");
+
+} else {
+    
 $nome = sanifica_valida($_GET["nome"]);
 $email = sanifica_valida($_GET["email"]);
 $commento = sanifica_valida($_GET["commento"]);
@@ -21,22 +28,7 @@ $x->bindParam(":email", $email);
 $x->bindParam(":post", $post);
 $x->execute();
 
+header('Location: ./post/post' . $post . '.php');
 
-
-if($x){
-    switch($post) {
-        case 1:
-            header('Location: ./post/post1.php');
-        break;
-        case 2:
-            header('Location:./post/post2.php');
-        break;
-        case 3:
-            header('Location: ./post/post3.php');
-        break;
-     }
-    } else {
-        echo "smth went wrong ugh (commento.php)";
-    }
-
+}
 ?>
